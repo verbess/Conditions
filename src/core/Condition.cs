@@ -9,12 +9,12 @@ namespace Verbess.Utils.Conditions
     {
         /// <summary>
         /// Returns a new <see cref="Validator{T}">Validator</see> that allows you to
-        /// validate the preconditions of the given parament, given it a default ParamentName of 'value'.
+        /// validate the preconditions of the given parameter, given it a default ParameterName of 'value'.
         /// </summary>
-        /// <typeparam name="T">The type of the parament to validate.</typeparam>
-        /// <param name="value">The value of the parament to validate.</param>
+        /// <typeparam name="T">The type of the parameter to validate.</typeparam>
+        /// <param name="value">The value of the parameter to validate.</param>
         /// <returns>A new <see cref="Validator{T}">Validator</see> containing the 
-        /// <paramref name="value"/> and "value" as parament name.</returns>
+        /// <paramref name="value"/> and "value" as parameter name.</returns>
         public static Validator<T> Requires<T>(this T value)
         {
             return new RequiresValidator<T>(nameof(value), value);
@@ -22,11 +22,11 @@ namespace Verbess.Utils.Conditions
 
         /// <summary>
         /// Returns a new <see cref="Validator{T}">Validator</see> that allows you to
-        /// validate the preconditions of the given parament.
+        /// validate the preconditions of the given parameter.
         /// </summary>
-        /// <typeparam name="T">The type of the parament to validate.</typeparam>
-        /// <param name="value">The value of the parament to validate.</param>
-        /// <param name="paramName">The name of the parament to validate</param>
+        /// <typeparam name="T">The type of the parameter to validate.</typeparam>
+        /// <param name="value">The value of the parameter to validate.</param>
+        /// <param name="paramName">The name of the parameter to validate</param>
         /// <returns>A new <see cref="Validator{T}">Validator</see> containing the 
         /// <paramref name="value"/> and <paramref name="paramName"/>.</returns>
         public static Validator<T> Requires<T>(this T value, string paramName)
@@ -36,12 +36,12 @@ namespace Verbess.Utils.Conditions
 
         /// <summary>
         /// Returns a new <see cref="Validator{T}">Validator</see> that allows you to 
-        /// validate the given parament, given it a default ParamentName of 'value'.
+        /// validate the given parameter, given it a default ParameterName of 'value'.
         /// </summary>
-        /// <typeparam name="T">The type of the parament to validate.</typeparam>
-        /// <param name="value">The value of the parament to validate.</param>
+        /// <typeparam name="T">The type of the parameter to validate.</typeparam>
+        /// <param name="value">The value of the parameter to validate.</param>
         /// <returns>A new <see cref="Validator{T}">Validator</see> containing the 
-        /// <paramref name="value"/> and "value" as parament name.</returns>
+        /// <paramref name="value"/> and "value" as parameter name.</returns>
         public static Validator<T> Ensures<T>(this T value)
         {
             return new EnsuresValidator<T>(nameof(value), value);
@@ -53,7 +53,7 @@ namespace Verbess.Utils.Conditions
         /// </summary>
         /// <typeparam name="T">The type of the object to validate.</typeparam>
         /// <param name="value">The object to validate.</param>
-        /// <param name="paramName">The name of the parament to validate</param>
+        /// <param name="paramName">The name of the parameter to validate</param>
         /// <returns>A new <see cref="Validator{T}">Validator</see> containing the 
         /// <paramref name="value"/> and <paramref name="paramName"/>.</returns>
         public static Validator<T> Ensures<T>(this T value, string paramName)
