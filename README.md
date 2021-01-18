@@ -54,7 +54,7 @@ A particular validation is executed immediately when it's method is called, and 
 
 ### C# 6
 
-C# 6 compiler provides easier way for accessing extension methods. With `using static Condition;` you have no longer to prefix `Requried` and `Ensures` methods with name of `Condition` static class. 
+C# 6 compiler provides easier way for accessing extension methods. With `using static Condition;` you have no longer to prefix `Requires` and `Ensures` methods with name of `Condition` static class. 
 
 For example:
 
