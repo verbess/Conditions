@@ -688,9 +688,8 @@ namespace Verbess.Utils.Conditions
         {
             string validatorValue = validator.Value;
 
-            bool valueIsValid = (value == null && validatorValue == null) ||
-                                ((value != null && validatorValue != null) &&
-                                 (validatorValue.StartsWith(value, comparisonType)));
+            bool valueIsValid = ((value == null) && (validatorValue == null)) ||
+                                ((value != null) && (validatorValue != null) && (validatorValue.StartsWith(value, comparisonType)));
 
             if (!valueIsValid)
             {
@@ -773,9 +772,8 @@ namespace Verbess.Utils.Conditions
         {
             string validatorValue = validator.Value;
 
-            bool valueIsInvalid = (value == null && validatorValue == null) ||
-                                  ((value != null) && (validatorValue != null) &&
-                                   (validatorValue.StartsWith(value, comparisonType)));
+            bool valueIsInvalid = ((value == null) && (validatorValue == null)) ||
+                                  ((value != null) && (validatorValue != null) && (validatorValue.StartsWith(value, comparisonType)));
 
             if (valueIsInvalid)
             {
@@ -818,9 +816,8 @@ namespace Verbess.Utils.Conditions
         {
             string validatorValue = validator.Value;
 
-            bool valueIsValid = (value == null && validatorValue == null) ||
-                                ((value != null) && (validatorValue != null) &&
-                                 (validatorValue.Contains(value)));
+            bool valueIsValid = ((value == null) && (validatorValue == null)) ||
+                                ((value != null) && (validatorValue != null) && (validatorValue.Contains(value)));
 
             if (!valueIsValid)
             {
@@ -863,9 +860,8 @@ namespace Verbess.Utils.Conditions
         {
             string validatorValue = validator.Value;
 
-            bool valueIsInvalid = (value == null && validatorValue == null) ||
-                                  ((value != null) && (validatorValue != null) &&
-                                   (validatorValue.Contains(value)));
+            bool valueIsInvalid = ((value == null) && (validatorValue == null)) ||
+                                  ((value != null) && (validatorValue != null) && (validatorValue.Contains(value)));
 
             if (valueIsInvalid)
             {
@@ -948,9 +944,8 @@ namespace Verbess.Utils.Conditions
         {
             string validatorValue = validator.Value;
 
-            bool valueIsValid = (value == null && validatorValue == null) ||
-                                ((value != null) && (validatorValue != null) &&
-                                 (validatorValue.EndsWith(value, comparisonType)));
+            bool valueIsValid = ((value == null) && (validatorValue == null)) ||
+                                ((value != null) && (validatorValue != null) && (validatorValue.EndsWith(value, comparisonType)));
 
             if (!valueIsValid)
             {
@@ -1034,8 +1029,7 @@ namespace Verbess.Utils.Conditions
             string validatorValue = validator.Value;
 
             bool valueIsInvalid = ((value == null) && (validatorValue == null)) ||
-                                  ((value != null) && (validatorValue != null) &&
-                                   (validatorValue.EndsWith(value, comparisonType)));
+                                  ((value != null) && (validatorValue != null) && (validatorValue.EndsWith(value, comparisonType)));
 
             if (valueIsInvalid)
             {
