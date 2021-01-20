@@ -712,7 +712,7 @@ namespace Verbess.Utils.Conditions
             {
                 try
                 {
-                    return String.Format(CultureInfo.CurrentCulture, conditionDescription ?? String.Empty, validator.ParamName);
+                    return String.Format(CultureInfo.CurrentCulture, conditionDescription, validator.ParamName);
                 }
                 catch (FormatException)
                 {
