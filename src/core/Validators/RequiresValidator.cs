@@ -33,9 +33,11 @@ namespace Verbess.Utils.Conditions
             {
                 case ConstraintViolationType.OutOfRange:
                     return new ArgumentOutOfRangeException(ParamName, message);
+
                 case ConstraintViolationType.Invalid:
                     ArgumentException argumentException = new ArgumentException(message, ParamName);
                     return new ArgumentException(argumentException.Message);
+
                 default:
                     if (Value != null)
                     {
