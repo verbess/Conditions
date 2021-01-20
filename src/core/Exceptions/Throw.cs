@@ -24,6 +24,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeBetweenXAndY, conditionDescription, validator.ParamName, minValue.Stringify(), maxValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -34,6 +35,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeEqualToX, conditionDescription, validator.ParamName, value.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>();
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -51,6 +53,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeGreaterThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -61,6 +64,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeGreaterThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -71,6 +75,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeGreaterThanOrEqualToX, conditionDescription, validator.ParamName, minValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType type = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, type);
@@ -81,6 +86,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeGreaterThanOrEqualToX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType type = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, type);
@@ -91,6 +97,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeSmallerThanX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -101,6 +108,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeSmallerThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -111,6 +119,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeSmallerThanOrEqualToX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -121,6 +130,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeSmallerThanOrEqualToX, conditionDescription, validator.ParamName, minValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>(ConstraintViolationType.OutOfRange);
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -131,6 +141,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeValid, conditionDescription, validator.ParamName);
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>();
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -143,6 +154,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.LambdaXShouldHoldForValue, conditionDescription, validator.ParamName, lambdaDefinition);
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>();
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -190,6 +202,7 @@ namespace Verbess.Utils.Conditions
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeBetweenXAndY, conditionDescription, validator.ParamName, minValue.Stringify(), maxValue.Stringify());
 
             string additionalMessage = GetActualValueMessage<T>(validator);
+
             ConstraintViolationType violationType = GetViolationOrDefault<T>();
 
             validator.Throw(condition, additionalMessage, violationType);
@@ -212,7 +225,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldHaveLength(Validator<string> validator, int length, string conditionDescription)
         {
             string condition;
-
             if (length == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBe1CharacterLong, conditionDescription, validator.ParamName);
@@ -230,7 +242,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldNotHaveLength(Validator<string> validator, int length, string conditionDescription)
         {
             string condition;
-
             if (length == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotBe1CharacterLong, conditionDescription, validator.ParamName);
@@ -246,7 +257,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldBeLongerThan(Validator<string> validator, int minLength, string conditionDescription)
         {
             string condition;
-
             if (minLength == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeLongerThan1Character, conditionDescription, validator.ParamName);
@@ -264,7 +274,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldBeShorterThan(Validator<string> validator, int maxLength, string conditionDescription)
         {
             string condition;
-
             if (maxLength == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeShorterThan1Character, conditionDescription, validator.ParamName);
@@ -282,7 +291,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldBeShorterOrEqualTo(Validator<string> validator, int maxLength, string conditionDescription)
         {
             string condition;
-
             if (maxLength == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeShorterOrEqualTo1Character, conditionDescription, validator.ParamName);
@@ -300,7 +308,6 @@ namespace Verbess.Utils.Conditions
         internal static void StringShouldBeLongerOrEqualTo(Validator<string> validator, int minLength, string conditionDescription)
         {
             string condition;
-
             if (minLength == 1)
             {
                 condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeLongerOrEqualTo1Character, conditionDescription, validator.ParamName);
@@ -500,7 +507,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContain1Element, conditionDescription, validator.ParamName);
@@ -516,7 +522,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldNotContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription)
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContain1Element, conditionDescription, validator.ParamName);
@@ -532,7 +537,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainLessThan1Element, conditionDescription, validator.ParamName);
@@ -550,7 +554,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldNotContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainLessThan1Element, conditionDescription, validator.ParamName);
@@ -586,7 +589,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainMoreThan1Element, conditionDescription, validator.ParamName);
@@ -604,7 +606,6 @@ namespace Verbess.Utils.Conditions
         internal static void CollectionShouldNotContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
-
             if (numberOfElements == 1)
             {
                 condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainMoreThan1Element, conditionDescription, validator.ParamName);
@@ -640,19 +641,19 @@ namespace Verbess.Utils.Conditions
         private static string GetActualValueMessage<T>(Validator<T> validator)
         {
             object value = validator.Value;
-
             if ((value == null) || (value.GetType().FullName != value.ToString()))
             {
                 return StringResources.GetString(StringResources.TheActualValueIsX, validator.ParamName, validator.Value.Stringify());
             }
-
-            return null;
+            else
+            {
+                return null;
+            }
         }
 
         private static string GetActualStringLengthMessage(Validator<string> validator)
         {
             int length = validator.Value != null ? validator.Value.Length : 0;
-
             if (length == 1)
             {
                 return StringResources.GetString(StringResources.TheActualValueIs1CharacterLong, validator.ParamName);
@@ -666,7 +667,6 @@ namespace Verbess.Utils.Conditions
         private static string GetCollectionContainsElementsMessage<T>(Validator<T> validator) where T : IEnumerable
         {
             IEnumerable collection = validator.Value;
-
             if (collection == null)
             {
                 return StringResources.GetString(StringResources.CollectionIsCurrentlyANullReference, validator.ParamName);
@@ -674,7 +674,6 @@ namespace Verbess.Utils.Conditions
             else
             {
                 int numberOfElements = CollectionExtensions.GetLength(collection);
-
                 if (numberOfElements == 1)
                 {
                     return StringResources.GetString(StringResources.CollectionContainsCurrently1Element, validator.ParamName);
@@ -728,8 +727,10 @@ namespace Verbess.Utils.Conditions
             {
                 return "null";
             }
-
-            return lambda.Body.ToString();
+            else
+            {
+                return lambda.Body.ToString();
+            }
         }
     }
 }
