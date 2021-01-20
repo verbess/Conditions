@@ -133,8 +133,10 @@ namespace Verbess.Utils.Conditions
             {
                 return format;
             }
-
-            return String.Format(format, args);
+            else
+            {
+                return String.Format(format, args);
+            }
         }
     }
 }
