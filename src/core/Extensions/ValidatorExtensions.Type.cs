@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 
 namespace Verbess.Utils.Conditions

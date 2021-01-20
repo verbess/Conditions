@@ -16,6 +16,7 @@ namespace Verbess.Utils.Conditions
         internal override Exception BuildExceptionBasedOnViolationType(ConstraintViolationType type, string message)
         {
             ConstructorInfo constructor = AlternativeExceptionExtensions<TException>.Constructor;
+
             return (Exception)constructor.Invoke(new object[] { message });
         }
     }

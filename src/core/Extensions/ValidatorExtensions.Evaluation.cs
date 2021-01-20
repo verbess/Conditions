@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
@@ -72,7 +72,6 @@ namespace Verbess.Utils.Conditions
             if (expression != null)
             {
                 Func<T, bool> func = new Func<T, bool>(expression.Compile());
-
                 valueIsValid = func.Invoke(validator.Value);
             }
 

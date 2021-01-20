@@ -198,6 +198,7 @@ namespace Verbess.Utils.Conditions
             }
 
             IEnumerator enumerator = sequence.GetEnumerator();
+
             try
             {
                 int lengthOfSequence = 0;
@@ -277,6 +278,7 @@ namespace Verbess.Utils.Conditions
             }
 
             IEnumerator enumerator = sequence.GetEnumerator();
+
             try
             {
                 int lengthOfSequence = 0;
@@ -436,6 +438,7 @@ namespace Verbess.Utils.Conditions
             }
 
             IEnumerator enumerator = sequence.GetEnumerator();
+
             try
             {
                 int count = 0;
@@ -509,8 +512,10 @@ namespace Verbess.Utils.Conditions
             {
                 return collection.Count;
             }
-
-            return 0;
+            else
+            {
+                return 0;
+            }
         }
 
         private static Dictionary<object, byte> ConvertToSet(IEnumerable sequence, out bool sequenceContainsNull)
@@ -545,8 +550,10 @@ namespace Verbess.Utils.Conditions
             {
                 return collection.Count;
             }
-
-            return 0;
+            else
+            {
+                return 0;
+            }
         }
     }
 }

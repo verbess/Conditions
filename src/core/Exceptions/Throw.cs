@@ -641,6 +641,7 @@ namespace Verbess.Utils.Conditions
         private static string GetActualValueMessage<T>(Validator<T> validator)
         {
             object value = validator.Value;
+
             if ((value == null) || (value.GetType().FullName != value.ToString()))
             {
                 return StringResources.GetString(StringResources.TheActualValueIsX, validator.ParamName, validator.Value.Stringify());
@@ -654,6 +655,7 @@ namespace Verbess.Utils.Conditions
         private static string GetActualStringLengthMessage(Validator<string> validator)
         {
             int length = validator.Value != null ? validator.Value.Length : 0;
+
             if (length == 1)
             {
                 return StringResources.GetString(StringResources.TheActualValueIs1CharacterLong, validator.ParamName);
@@ -667,6 +669,7 @@ namespace Verbess.Utils.Conditions
         private static string GetCollectionContainsElementsMessage<T>(Validator<T> validator) where T : IEnumerable
         {
             IEnumerable collection = validator.Value;
+
             if (collection == null)
             {
                 return StringResources.GetString(StringResources.CollectionIsCurrentlyANullReference, validator.ParamName);
@@ -674,6 +677,7 @@ namespace Verbess.Utils.Conditions
             else
             {
                 int numberOfElements = CollectionExtensions.GetLength(collection);
+
                 if (numberOfElements == 1)
                 {
                     return StringResources.GetString(StringResources.CollectionContainsCurrently1Element, validator.ParamName);

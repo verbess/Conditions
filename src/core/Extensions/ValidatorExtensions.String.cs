@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Verbess.Utils.Conditions
 {
@@ -100,8 +100,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsShorterThan(this Validator<string> validator, int maxLength)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -132,8 +132,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsShorterThan(this Validator<string> validator, int maxLength, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -160,8 +160,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsShorterOrEqual(this Validator<string> validator, int maxLength)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -192,8 +192,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsShorterOrEqual(this Validator<string> validator, int maxLength, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -220,8 +220,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsLongerThan(this Validator<string> validator, int minLength)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -252,8 +252,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsLongerThan(this Validator<string> validator, int minLength, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -280,8 +280,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsLongerOrEqual(this Validator<string> validator, int minLength)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -312,8 +312,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> IsLongerOrEqual(this Validator<string> validator, int minLength, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -340,8 +340,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> HasLength(this Validator<string> validator, int length)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -372,8 +372,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> HasLength(this Validator<string> validator, int length, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -400,8 +400,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> DoesNotHaveLength(this Validator<string> validator, int length)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;
@@ -432,8 +432,8 @@ namespace Verbess.Utils.Conditions
         public static Validator<string> DoesNotHaveLength(this Validator<string> validator, int length, string conditionDescription)
         {
             string value = validator.Value;
-
             int valueLength = 0;
+
             if (value != null)
             {
                 valueLength = value.Length;

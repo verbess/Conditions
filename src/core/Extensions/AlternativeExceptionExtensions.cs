@@ -33,12 +33,15 @@ namespace Verbess.Utils.Conditions
         private static ConstructorInfo FindConstructor()
         {
             TypeInfo typeInfo = typeof(TException).GetTypeInfo();
+
             if (typeInfo.IsAbstract)
             {
                 return null;
             }
-
-            return typeInfo.DeclaredConstructors.Where<ConstructorInfo>(IsUsableConstructor).FirstOrDefault<ConstructorInfo>();
+            else
+            {
+                return typeInfo.DeclaredConstructors.Where<ConstructorInfo>(IsUsableConstructor).FirstOrDefault<ConstructorInfo>();
+            }
         }
 
         private static bool IsUsableConstructor(ConstructorInfo constructor)
