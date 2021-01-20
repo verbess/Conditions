@@ -75,8 +75,10 @@ namespace Verbess.Utils.Conditions
             {
                 throw new ArgumentException(StringResources.GetString(StringResources.ExceptionTypeIsInvalid, typeof(TException)), nameof(TException));
             }
-
-            return condition;
+            else
+            {
+                return condition;
+            }
         }
     }
 }
