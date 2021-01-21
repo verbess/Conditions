@@ -1045,7 +1045,7 @@ namespace Verbess.Utils.Conditions
             {
                 for (int i = 0; i < value.Length; i++)
                 {
-                    if (!char.IsWhiteSpace(value[i]))
+                    if (!Char.IsWhiteSpace(value[i]))
                     {
                         return false;
                     }

@@ -16,7 +16,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsNaN(value))
+            if (!Double.IsNaN(value))
             {
                 Throw.ValueShouldBeANumber<double>(validator, null);
             }
@@ -39,7 +39,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsNaN(value))
+            if (!Double.IsNaN(value))
             {
                 Throw.ValueShouldBeANumber<double>(validator, conditionDescription);
             }
@@ -58,7 +58,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsNaN(value))
+            if (Double.IsNaN(value))
             {
                 Throw.ValueShouldNotBeANumber<double>(validator, null);
             }
@@ -81,7 +81,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsNaN(value))
+            if (Double.IsNaN(value))
             {
                 Throw.ValueShouldNotBeANumber<double>(validator, conditionDescription);
             }
@@ -100,7 +100,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsInfinity(value))
+            if (!Double.IsInfinity(value))
             {
                 Throw.ValueShouldBeInfinity<double>(validator, null);
             }
@@ -123,7 +123,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsInfinity(value))
+            if (!Double.IsInfinity(value))
             {
                 Throw.ValueShouldBeInfinity<double>(validator, conditionDescription);
             }
@@ -142,7 +142,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsInfinity(value))
+            if (Double.IsInfinity(value))
             {
                 Throw.ValueShouldNotBeInfinity<double>(validator, null);
             }
@@ -165,7 +165,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsInfinity(value))
+            if (Double.IsInfinity(value))
             {
                 Throw.ValueShouldNotBeInfinity<double>(validator, conditionDescription);
             }
@@ -184,7 +184,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsNegativeInfinity(value))
+            if (!Double.IsNegativeInfinity(value))
             {
                 Throw.ValueShouldBeNegativeInfinity<double>(validator, null);
             }
@@ -207,7 +207,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsNegativeInfinity(value))
+            if (!Double.IsNegativeInfinity(value))
             {
                 Throw.ValueShouldBeNegativeInfinity<double>(validator, conditionDescription);
             }
@@ -226,7 +226,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsNegativeInfinity(value))
+            if (Double.IsNegativeInfinity(value))
             {
                 Throw.ValueShouldNotBeNegativeInfinity<double>(validator, null);
             }
@@ -249,7 +249,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsNegativeInfinity(value))
+            if (Double.IsNegativeInfinity(value))
             {
                 Throw.ValueShouldNotBeNegativeInfinity<double>(validator, conditionDescription);
             }
@@ -268,7 +268,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsPositiveInfinity(value))
+            if (!Double.IsPositiveInfinity(value))
             {
                 Throw.ValueShouldBePositiveInfinity<double>(validator, null);
             }
@@ -291,7 +291,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (!double.IsPositiveInfinity(value))
+            if (!Double.IsPositiveInfinity(value))
             {
                 Throw.ValueShouldBePositiveInfinity<double>(validator, conditionDescription);
             }
@@ -310,7 +310,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsPositiveInfinity(value))
+            if (Double.IsPositiveInfinity(value))
             {
                 Throw.ValueShouldNotBePositiveInfinity<double>(validator, null);
             }
@@ -333,7 +333,7 @@ namespace Verbess.Utils.Conditions
         {
             double value = validator.Value;
 
-            if (double.IsPositiveInfinity(value))
+            if (Double.IsPositiveInfinity(value))
             {
                 Throw.ValueShouldNotBePositiveInfinity<double>(validator, conditionDescription);
             }
