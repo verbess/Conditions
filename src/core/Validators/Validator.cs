@@ -13,12 +13,18 @@ namespace Verbess.Utils.Conditions
 
         public string ParamName
         {
-            get => paramName;
+            get
+            {
+                return paramName;
+            }
         }
 
         public T Value
         {
-            get => value;
+            get
+            {
+                return value;
+            }
         }
 
         protected Validator(string paramName, T value)

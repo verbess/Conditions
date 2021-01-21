@@ -11,12 +11,18 @@ namespace Verbess.Utils.Conditions
 
         internal static AlternativeExceptionCondition Condition
         {
-            get => condition;
+            get
+            {
+                return condition;
+            }
         }
 
         internal static ConstructorInfo Constructor
         {
-            get => constructor;
+            get
+            {
+                return constructor;
+            }
         }
 
         static AlternativeExceptionExtensions()

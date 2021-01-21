@@ -8,7 +8,10 @@ namespace Verbess.Utils.Conditions
 
         public static Comparer<T> Default
         {
-            get => defaultComparer;
+            get
+            {
+                return defaultComparer;
+            }
         }
 
         static DefaultComparer()
