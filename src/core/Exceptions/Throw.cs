@@ -12,14 +12,14 @@ namespace Verbess.Utils.Conditions
     /// </summary>
     internal static class Throw
     {
-        internal static void ValueShouldNotBeNull<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldNotBeNull<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeNull, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeBetween<T>(Validator<T> validator, T minValue, T maxValue, string conditionDescription)
+        public static void ValueShouldBeBetween<T>(Validator<T> validator, T minValue, T maxValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeBetweenXAndY, conditionDescription, validator.ParamName, minValue.Stringify(), maxValue.Stringify());
 
@@ -30,7 +30,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldBeEqualTo<T>(Validator<T> validator, T value, string conditionDescription)
+        public static void ValueShouldBeEqualTo<T>(Validator<T> validator, T value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeEqualToX, conditionDescription, validator.ParamName, value.Stringify());
 
@@ -41,14 +41,14 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldBeNull<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeNull<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeNull, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeGreaterThan<T>(Validator<T> validator, T minValue, string conditionDescription)
+        public static void ValueShouldBeGreaterThan<T>(Validator<T> validator, T minValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeGreaterThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
@@ -59,7 +59,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldNotBeGreaterThan<T>(Validator<T> validator, T minValue, string conditionDescription)
+        public static void ValueShouldNotBeGreaterThan<T>(Validator<T> validator, T minValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeGreaterThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
@@ -70,7 +70,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldBeGreaterThanOrEqualTo<T>(Validator<T> validator, T minValue, string conditionDescription)
+        public static void ValueShouldBeGreaterThanOrEqualTo<T>(Validator<T> validator, T minValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeGreaterThanOrEqualToX, conditionDescription, validator.ParamName, minValue.Stringify());
 
@@ -81,7 +81,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, type);
         }
 
-        internal static void ValueShouldNotBeGreaterThanOrEqualTo<T>(Validator<T> validator, T maxValue, string conditionDescription)
+        public static void ValueShouldNotBeGreaterThanOrEqualTo<T>(Validator<T> validator, T maxValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeGreaterThanOrEqualToX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
@@ -92,7 +92,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, type);
         }
 
-        internal static void ValueShouldBeSmallerThan<T>(Validator<T> validator, T maxValue, string conditionDescription)
+        public static void ValueShouldBeSmallerThan<T>(Validator<T> validator, T maxValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeSmallerThanX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
@@ -103,7 +103,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldNotBeSmallerThan<T>(Validator<T> validator, T minValue, string conditionDescription)
+        public static void ValueShouldNotBeSmallerThan<T>(Validator<T> validator, T minValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeSmallerThanX, conditionDescription, validator.ParamName, minValue.Stringify());
 
@@ -114,7 +114,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldBeSmallerThanOrEqualTo<T>(Validator<T> validator, T maxValue, string conditionDescription)
+        public static void ValueShouldBeSmallerThanOrEqualTo<T>(Validator<T> validator, T maxValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeSmallerThanOrEqualToX, conditionDescription, validator.ParamName, maxValue.Stringify());
 
@@ -125,7 +125,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldNotBeSmallerThanOrEqualTo<T>(Validator<T> validator, T minValue, string conditionDescription)
+        public static void ValueShouldNotBeSmallerThanOrEqualTo<T>(Validator<T> validator, T minValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeSmallerThanOrEqualToX, conditionDescription, validator.ParamName, minValue.Stringify());
 
@@ -136,7 +136,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ExpressionEvaluatedFalse<T>(Validator<T> validator, string conditionDescription)
+        public static void ExpressionEvaluatedFalse<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeValid, conditionDescription, validator.ParamName);
 
@@ -147,7 +147,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void LambdaXShouldHoldForValue<T>(Validator<T> validator, LambdaExpression lambda, string conditionDescription)
+        public static void LambdaXShouldHoldForValue<T>(Validator<T> validator, LambdaExpression lambda, string conditionDescription)
         {
             string lambdaDefinition = GetLambdaDefinition(lambda);
 
@@ -160,35 +160,35 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void ValueShouldBeNullOrAnEmptyString(Validator<string> validator, string conditionDescription)
+        public static void ValueShouldBeNullOrAnEmptyString(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeNullOrEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeAnEmptyString(Validator<string> validator, string conditionDescription)
+        public static void ValueShouldBeAnEmptyString(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeAnEmptyString(Validator<string> validator, string conditionDescription)
+        public static void ValueShouldNotBeAnEmptyString(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotBeEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeNullOrAnEmptyString(Validator<string> validator, string conditionDescription)
+        public static void ValueShouldNotBeNullOrAnEmptyString(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotBeNullOrEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeUnequalTo<T>(Validator<T> validator, T value, string conditionDescription)
+        public static void ValueShouldBeUnequalTo<T>(Validator<T> validator, T value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeUnequalToX, conditionDescription, validator.ParamName, value.Stringify());
 
@@ -197,7 +197,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, violationType);
         }
 
-        internal static void ValueShouldNotBeBetween<T>(Validator<T> validator, T minValue, T maxValue, string conditionDescription)
+        public static void ValueShouldNotBeBetween<T>(Validator<T> validator, T minValue, T maxValue, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeBetweenXAndY, conditionDescription, validator.ParamName, minValue.Stringify(), maxValue.Stringify());
 
@@ -208,21 +208,21 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage, violationType);
         }
 
-        internal static void StringShouldBeNullOrWhiteSpace(Validator<string> validator, string conditionDescription)
+        public static void StringShouldBeNullOrWhiteSpace(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldBeNullOrWhiteSpace, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldNotBeNullOrWhiteSpace(Validator<string> validator, string conditionDescription)
+        public static void StringShouldNotBeNullOrWhiteSpace(Validator<string> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotBeNullOrWhiteSpace, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldHaveLength(Validator<string> validator, int length, string conditionDescription)
+        public static void StringShouldHaveLength(Validator<string> validator, int length, string conditionDescription)
         {
             string condition;
             if (length == 1)
@@ -239,7 +239,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void StringShouldNotHaveLength(Validator<string> validator, int length, string conditionDescription)
+        public static void StringShouldNotHaveLength(Validator<string> validator, int length, string conditionDescription)
         {
             string condition;
             if (length == 1)
@@ -254,7 +254,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition);
         }
 
-        internal static void StringShouldBeLongerThan(Validator<string> validator, int minLength, string conditionDescription)
+        public static void StringShouldBeLongerThan(Validator<string> validator, int minLength, string conditionDescription)
         {
             string condition;
             if (minLength == 1)
@@ -271,7 +271,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void StringShouldBeShorterThan(Validator<string> validator, int maxLength, string conditionDescription)
+        public static void StringShouldBeShorterThan(Validator<string> validator, int maxLength, string conditionDescription)
         {
             string condition;
             if (maxLength == 1)
@@ -288,7 +288,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void StringShouldBeShorterOrEqualTo(Validator<string> validator, int maxLength, string conditionDescription)
+        public static void StringShouldBeShorterOrEqualTo(Validator<string> validator, int maxLength, string conditionDescription)
         {
             string condition;
             if (maxLength == 1)
@@ -305,7 +305,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void StringShouldBeLongerOrEqualTo(Validator<string> validator, int minLength, string conditionDescription)
+        public static void StringShouldBeLongerOrEqualTo(Validator<string> validator, int minLength, string conditionDescription)
         {
             string condition;
             if (minLength == 1)
@@ -322,189 +322,189 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void StringShouldContain(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldContain(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldContainX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldNotContain(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldNotContain(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotContainX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldNotEndWith(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldNotEndWith(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotEndWithX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldNotStartWith(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldNotStartWith(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldNotStartWithX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldEndWith(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldEndWith(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldEndWithX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void StringShouldStartWith(Validator<string> validator, string value, string conditionDescription)
+        public static void StringShouldStartWith(Validator<string> validator, string value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<string>(validator, StringResources.StringShouldStartWithX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeOfType<T>(Validator<T> validator, Type type, string conditionDescription)
+        public static void ValueShouldBeOfType<T>(Validator<T> validator, Type type, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeOfTypeX, conditionDescription, validator.ParamName, type.Name);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeOfType<T>(Validator<T> validator, Type type, string conditionDescription)
+        public static void ValueShouldNotBeOfType<T>(Validator<T> validator, Type type, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeOfTypeX, conditionDescription, validator.ParamName, type.Name);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeTrue<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeTrue<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeTrue, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeFalse<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeFalse<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeFalse, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeANumber<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeANumber<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeANumber, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeANumber<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldNotBeANumber<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeANumber, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldNotBeInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBeNegativeInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBeNegativeInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBeNegativeInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBeNegativeInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldNotBeNegativeInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBeNegativeInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldBePositiveInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldBePositiveInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldBePositiveInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void ValueShouldNotBePositiveInfinity<T>(Validator<T> validator, string conditionDescription)
+        public static void ValueShouldNotBePositiveInfinity<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.ValueShouldNotBePositiveInfinity, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldBeEmpty<T>(Validator<T> validator, string conditionDescription)
+        public static void CollectionShouldBeEmpty<T>(Validator<T> validator, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldBeEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldNotBeEmpty<T>(Validator<T> validator, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldNotBeEmpty<T>(Validator<T> validator, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotBeEmpty, conditionDescription, validator.ParamName);
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldContain<T>(Validator<T> validator, object value, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContain<T>(Validator<T> validator, object value, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldNotContain<T>(Validator<T> validator, object value, string conditionDescription)
+        public static void CollectionShouldNotContain<T>(Validator<T> validator, object value, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainX, conditionDescription, validator.ParamName, value.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldContainAtLeastOneOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
+        public static void CollectionShouldContainAtLeastOneOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainAtLeastOneOfX, conditionDescription, validator.ParamName, values.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldNotContainAnyOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
+        public static void CollectionShouldNotContainAnyOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainAnyOfX, conditionDescription, validator.ParamName, values.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldContainAllOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainAllOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainAllOfX, conditionDescription, validator.ParamName, values.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldNotContainAllOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
+        public static void CollectionShouldNotContainAllOf<T>(Validator<T> validator, IEnumerable values, string conditionDescription)
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainAllOfX, conditionDescription, validator.ParamName, values.Stringify());
 
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
             if (numberOfElements == 1)
@@ -519,7 +519,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, GetCollectionContainsElementsMessage<T>(validator));
         }
 
-        internal static void CollectionShouldNotContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription)
+        public static void CollectionShouldNotContainNumberOfElements<T>(Validator<T> validator, int numberOfElements, string conditionDescription)
         {
             string condition;
             if (numberOfElements == 1)
@@ -534,7 +534,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition);
         }
 
-        internal static void CollectionShouldContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
             if (numberOfElements == 1)
@@ -551,7 +551,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldNotContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldNotContainLessThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
             if (numberOfElements == 1)
@@ -568,7 +568,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldContainLessOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainLessOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainXOrLessElements, conditionDescription, validator.ParamName, numberOfElements);
 
@@ -577,7 +577,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldNotContainLessOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldNotContainLessOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainXOrLessElements, conditionDescription, validator.ParamName, numberOfElements);
 
@@ -586,7 +586,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
             if (numberOfElements == 1)
@@ -603,7 +603,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldNotContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldNotContainMoreThan<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition;
             if (numberOfElements == 1)
@@ -620,7 +620,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldContainMoreOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldContainMoreOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldContainXOrMoreElements, conditionDescription, validator.ParamName, numberOfElements);
 
@@ -629,7 +629,7 @@ namespace Verbess.Utils.Conditions
             validator.Throw(condition, additionalMessage);
         }
 
-        internal static void CollectionShouldNotContainMoreOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
+        public static void CollectionShouldNotContainMoreOrEqual<T>(Validator<T> validator, int numberOfElements, string conditionDescription) where T : IEnumerable
         {
             string condition = GetFormattedConditionMessage<T>(validator, StringResources.CollectionShouldNotContainXOrMoreElements, conditionDescription, validator.ParamName, numberOfElements);
 

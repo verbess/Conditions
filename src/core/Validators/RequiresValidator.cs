@@ -8,7 +8,7 @@ namespace Verbess.Utils.Conditions
     /// <typeparam name="T">The type of the parameter to be validated.</typeparam>
     internal class RequiresValidator<T> : Validator<T>
     {
-        internal RequiresValidator(string paramName, T value) : base(paramName, value) { }
+        public RequiresValidator(string paramName, T value) : base(paramName, value) { }
 
         protected override void ThrowCore(string condition, string additionalMessage, ConstraintViolationType type)
         {
@@ -27,7 +27,7 @@ namespace Verbess.Utils.Conditions
             throw exception;
         }
 
-        internal virtual Exception BuildExceptionBasedOnViolationType(ConstraintViolationType type, string message)
+        public virtual Exception BuildExceptionBasedOnViolationType(ConstraintViolationType type, string message)
         {
             switch (type)
             {

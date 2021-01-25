@@ -9,7 +9,7 @@ namespace Verbess.Utils.Conditions
     /// </summary>
     internal static class CollectionExtensions
     {
-        internal static bool Contains<T>(IEnumerable<T> sequence, T value)
+        public static bool Contains<T>(IEnumerable<T> sequence, T value)
         {
             IEqualityComparer<T> comparer = EqualityComparer<T>.Default;
 
@@ -24,7 +24,7 @@ namespace Verbess.Utils.Conditions
             return false;
         }
 
-        internal static bool Contains(IEnumerable sequence, object value)
+        public static bool Contains(IEnumerable sequence, object value)
         {
             Comparer<object> comparer = Comparer<object>.Default;
 
@@ -39,7 +39,7 @@ namespace Verbess.Utils.Conditions
             return false;
         }
 
-        internal static bool ContainsAny<T>(IEnumerable<T> sequence, IEnumerable<T> values)
+        public static bool ContainsAny<T>(IEnumerable<T> sequence, IEnumerable<T> values)
         {
             if (IsSequenceNullOrEmpty<T>(values))
             {
@@ -75,7 +75,7 @@ namespace Verbess.Utils.Conditions
             return false;
         }
 
-        internal static bool ContainsAny(IEnumerable sequence, IEnumerable values)
+        public static bool ContainsAny(IEnumerable sequence, IEnumerable values)
         {
             if (IsSequenceNullOrEmpty(values))
             {
@@ -111,7 +111,7 @@ namespace Verbess.Utils.Conditions
             return false;
         }
 
-        internal static bool ContainsAll<T>(IEnumerable<T> sequence, IEnumerable<T> values)
+        public static bool ContainsAll<T>(IEnumerable<T> sequence, IEnumerable<T> values)
         {
             if (IsSequenceNullOrEmpty<T>(values))
             {
@@ -147,7 +147,7 @@ namespace Verbess.Utils.Conditions
             return true;
         }
 
-        internal static bool ContainsAll(IEnumerable sequence, IEnumerable values)
+        public static bool ContainsAll(IEnumerable sequence, IEnumerable values)
         {
             if (IsSequenceNullOrEmpty(values))
             {
@@ -183,7 +183,7 @@ namespace Verbess.Utils.Conditions
             return true;
         }
 
-        internal static bool SequenceHasLength(IEnumerable sequence, int numberOfElements)
+        public static bool SequenceHasLength(IEnumerable sequence, int numberOfElements)
         {
             if (sequence == null)
             {
@@ -225,7 +225,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool IsSequenceNullOrEmpty<TSource>(IEnumerable<TSource> sequence)
+        public static bool IsSequenceNullOrEmpty<TSource>(IEnumerable<TSource> sequence)
         {
             if (sequence == null)
             {
@@ -244,7 +244,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool IsSequenceNullOrEmpty(IEnumerable sequence)
+        public static bool IsSequenceNullOrEmpty(IEnumerable sequence)
         {
             if (sequence == null)
             {
@@ -263,7 +263,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool SequenceIsShorterThan(IEnumerable sequence, int numberOfElements)
+        public static bool SequenceIsShorterThan(IEnumerable sequence, int numberOfElements)
         {
             if (sequence == null)
             {
@@ -305,7 +305,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool SequenceIsShorterOrEqual(IEnumerable sequence, int numberOfElements)
+        public static bool SequenceIsShorterOrEqual(IEnumerable sequence, int numberOfElements)
         {
             if (sequence == null)
             {
@@ -346,7 +346,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool SequenceIsLongerThan(IEnumerable sequence, int numberOfElements)
+        public static bool SequenceIsLongerThan(IEnumerable sequence, int numberOfElements)
         {
             if (sequence == null)
             {
@@ -387,7 +387,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static bool SequenceIsLongerOrEqual(IEnumerable sequence, int numberOfElements)
+        public static bool SequenceIsLongerOrEqual(IEnumerable sequence, int numberOfElements)
         {
             if (sequence == null)
             {
@@ -428,7 +428,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static int GetLength(IEnumerable sequence)
+        public static int GetLength(IEnumerable sequence)
         {
             ICollection collection = sequence as ICollection;
 

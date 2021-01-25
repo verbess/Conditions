@@ -8,7 +8,7 @@ namespace Verbess.Utils.Conditions
     /// <typeparam name="T">The type of the parameter to be validated.</typeparam>
     internal sealed class EnsuresValidator<T> : Validator<T>
     {
-        internal EnsuresValidator(string paramName, T value) : base(paramName, value) { }
+        public EnsuresValidator(string paramName, T value) : base(paramName, value) { }
 
         protected override void ThrowCore(string condition, string additionalMessage, ConstraintViolationType type)
         {

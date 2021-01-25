@@ -9,7 +9,7 @@ namespace Verbess.Utils.Conditions
         private static readonly AlternativeExceptionCondition condition;
         private static readonly ConstructorInfo constructor;
 
-        internal static AlternativeExceptionCondition Condition
+        public static AlternativeExceptionCondition Condition
         {
             get
             {
@@ -17,7 +17,7 @@ namespace Verbess.Utils.Conditions
             }
         }
 
-        internal static ConstructorInfo Constructor
+        public static ConstructorInfo Constructor
         {
             get
             {
@@ -59,7 +59,7 @@ namespace Verbess.Utils.Conditions
 
         private sealed class AlternativeExceptionConditionInternal : AlternativeExceptionCondition
         {
-            internal AlternativeExceptionConditionInternal() : base() { }
+            public AlternativeExceptionConditionInternal() : base() { }
 
             public override Validator<T> Requires<T>(T value)
             {

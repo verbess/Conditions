@@ -18,7 +18,7 @@ namespace Verbess.Utils.Conditions
         /// </summary>
         /// <param name="value">The value to be transformed.</param>
         /// <returns>A string representation of the supplied <paramref name="value"/>.</returns>
-        internal static string Stringify(this object value)
+        public static string Stringify(this object value)
         {
             try
             {

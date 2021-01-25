@@ -11,9 +11,9 @@ namespace Verbess.Utils.Conditions
     /// <typeparam name="TException">The exception type to throw in case of a failure.</typeparam>
     internal sealed class RequiresWithCustomExceptionValidator<T, TException> : RequiresValidator<T> where TException : Exception
     {
-        internal RequiresWithCustomExceptionValidator(string paramName, T value) : base(paramName, value) { }
+        public RequiresWithCustomExceptionValidator(string paramName, T value) : base(paramName, value) { }
 
-        internal override Exception BuildExceptionBasedOnViolationType(ConstraintViolationType type, string message)
+        public override Exception BuildExceptionBasedOnViolationType(ConstraintViolationType type, string message)
         {
             ConstructorInfo constructor = AlternativeExceptionExtensions<TException>.Constructor;
 
