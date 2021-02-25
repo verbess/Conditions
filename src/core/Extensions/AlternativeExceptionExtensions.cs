@@ -27,13 +27,13 @@ namespace Verbess.Utils.Conditions
 
         static AlternativeExceptionExtensions()
         {
-            condition = BuildCondition();
             constructor = FindConstructor();
+            condition = BuildCondition();
         }
 
         private static AlternativeExceptionCondition BuildCondition()
         {
-            return FindConstructor() != null ? new AlternativeExceptionConditionInternal() : null;
+            return constructor != null ? new AlternativeExceptionConditionInternal() : null;
         }
 
         private static ConstructorInfo FindConstructor()
