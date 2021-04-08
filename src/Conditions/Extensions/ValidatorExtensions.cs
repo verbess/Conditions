@@ -6,7 +6,7 @@ using Conditions.Resources;
 using Conditions.Utils;
 using Conditions.Validators;
 
-namespace Conditions.Extensions
+namespace Conditions
 {
     /// <summary>
     /// Extension methods for <see cref="Validator{T}"/>.
