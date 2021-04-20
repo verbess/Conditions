@@ -18,6 +18,6 @@ namespace Conditions.Validators
         /// <summary>
         /// Throw the <see cref="System.ArgumentException"/>.
         /// </summary>
-        InvalidConstraint = 2,
+        InvalidConstraint = 2
     }
 }
