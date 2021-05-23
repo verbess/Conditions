@@ -4,19 +4,19 @@ namespace Conditions.Utils
 {
     internal static class DefaultComparer<T>
     {
-        private static readonly Comparer<T> defaultComparer;
+        private static readonly Comparer<T> _defaultComparer;
 
         public static Comparer<T> Default
         {
             get
             {
-                return defaultComparer;
+                return _defaultComparer;
             }
         }
 
         static DefaultComparer()
         {
-            defaultComparer = Comparer<T>.Default;
+            _defaultComparer = Comparer<T>.Default;
         }
     }
 }

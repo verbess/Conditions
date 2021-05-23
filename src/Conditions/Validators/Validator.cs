@@ -8,14 +8,14 @@ namespace Conditions.Validators
     /// <typeparam name="T">The type of the parameter to be validated.</typeparam>
     public abstract class Validator<T>
     {
-        private readonly string paramName;
-        private readonly T value;
+        private readonly string _paramName;
+        private readonly T _value;
 
         public string ParamName
         {
             get
             {
-                return paramName;
+                return _paramName;
             }
         }
 
@@ -23,14 +23,14 @@ namespace Conditions.Validators
         {
             get
             {
-                return value;
+                return _value;
             }
         }
 
         protected Validator(string paramName, T value)
         {
-            this.paramName = paramName;
-            this.value = value;
+            _paramName = paramName;
+            _value = value;
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Conditions.Validators
 
         public override string ToString()
         {
-            return String.Format("'{0}': {1}", paramName, value);
+            return String.Format("'{0}': {1}", _paramName, _value);
         }
     }
 }
